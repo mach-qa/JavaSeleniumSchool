@@ -55,7 +55,7 @@ public class JavaLesson2 {
         */
         //-------------operator trójargumentowy
         int balance, interest;
-        balance = 900;
+        balance = 1200;
         interest = (balance < 1000) ? 20 : 30;
         System.out.println("Balance = " + balance + " so Value of interest is : " + interest);
 
