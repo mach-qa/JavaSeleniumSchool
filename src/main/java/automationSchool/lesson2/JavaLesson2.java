@@ -1,5 +1,7 @@
 package automationSchool.lesson2;
 
+import java.util.*;
+
 public class JavaLesson2 {
     public static void main(String[] args) {
         String name = "Piotr";
@@ -55,7 +57,7 @@ public class JavaLesson2 {
         */
         //-------------operator trójargumentowy
         int balance, interest;
-        balance = 1200;
+        balance = 1900;
         interest = (balance < 1000) ? 20 : 30;
         System.out.println("Balance = " + balance + " so Value of interest is : " + interest);
 
@@ -100,7 +102,7 @@ public class JavaLesson2 {
         films[1] = new Film();      // tablica typu własnego - Film
         System.out.println("Rozmiar tablicy " + dni.length);
 
-        System.out.println(dni);  //[Ljava.lang.String;@3498ed  miejsce w oamięci
+        System.out.println(dni);  //[Ljava.lang.String;@3498ed  miejsce w pamięci
         for (int i = 0; i < dni.length; i++) {
             System.out.println(dni[i]);       //iteracja po tablicy for
         }
@@ -112,9 +114,9 @@ public class JavaLesson2 {
         String szkolenie = "szkolenie z Seleniu + Java";   // typ łańcuchowy String jest przechowywany w tablicy
         System.out.println("długość stringa szkolenie: " + szkolenie.length());
 
-        System.out.println("Znak na indeksie 1 to: " + szkolenie.charAt(2));   //k
-/*
-//zmienna typu char
+        System.out.println("Znak na indeksie 1 to: " + szkolenie.charAt(2));   //dodajemy charAt zawsze gdy sprawdzamy tablicę Stringa
+
+    //zmienna typu char
         System.out.println(" ________________char____  https://ascii-code.net/   __________");
         char znak = '!';
         System.out.println(znak);
@@ -137,16 +139,21 @@ public class JavaLesson2 {
 
 //3. **************************   kolekcje *****************
         List<Film> greatFilmsList = new ArrayList<>(); // Lista jest typem kolekcji. Trzeba Importowąc na górze pliku:
-        //import java.util.*; Inne typy list: new LinkedList<>();
+                                            //import java.util.*; Inne typy list: new LinkedList<>();
+
         greatFilmsList.add(new Film());  // dodawnaie elementu do listy. Zwraca true jesli udało się dodać obiekt do listy.
+
         List<Film> badFilmsList = new ArrayList<>();
         badFilmsList.add(new Film());
         badFilmsList.add(new Film());
         badFilmsList.add(new Film());           // druga kolekcja
+
         System.out.println("Rozmiar kolekcji greatFilsm: "+ greatFilmsList.size());  //1
         System.out.println("Rozmiar kolekcji badFils: "+ badFilmsList.size());  //3
         greatFilmsList.addAll(badFilmsList);
+
         System.out.println("Rozmiar kolekcji greatFilms po rozszerzeniu : "+ greatFilmsList.size());  //4
+
         badFilmsList.clear();  // usuwa wszystkie elementy z kolekcji
         System.out.println("Rozmiar kolekcji badFils po clear : "+ badFilmsList.size());
 
@@ -176,11 +183,12 @@ public class JavaLesson2 {
             System.out.println("Zawartosc Set");
             System.out.println(u); //iterowanie po Set
         }
-//Set<String> uczestnicy2Set = Set.of("Ajibola","Paulina", "Damdin", "Ajibola");
-//System.out.println("Rozmiar drugiego seta" + uczestnicy2Set.size()); //Exception in thread "main" java.lang.IllegalArgumentException: duplicate element: Ajibola
+        //Set<String> uczestnicy2Set = Set.of("Ajibola","Paulina", "Damdin", "Ajibola");
+        //System.out.println("Rozmiar drugiego seta" + uczestnicy2Set.size()); //Exception in thread "main" java.lang.IllegalArgumentException: duplicate element: Ajibola
         Set<String> uczestnicy3Set = Set.of("Ajibola","Paulina", "Damdin", "Darek");
         System.out.println("Rozmiar drugiego seta: " + uczestnicy3Set.size()); //Exception in thread "main" java.lang.IllegalArgumentException: duplicate element: Ajibola
-// 4. ************ String
+        /*
+ // 4. ************ String
         String imie1 = "Darek";
         String imie2 = new String("Darek");
         String imie3 = "Darek";
