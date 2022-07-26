@@ -111,7 +111,7 @@ public class JavaLesson2 {
             System.out.println(dzien);                  //iteracja po tablicy for each
         }
 
-        String szkolenie = "szkolenie z Seleniu + Java";   // typ łańcuchowy String jest przechowywany w tablicy
+        String szkolenie = "szkolenie z Selenium + Java";   // typ łańcuchowy String jest przechowywany w tablicy
         System.out.println("długość stringa szkolenie: " + szkolenie.length());
 
         System.out.println("Znak na indeksie 1 to: " + szkolenie.charAt(2));   //dodajemy charAt zawsze gdy sprawdzamy tablicę Stringa
@@ -159,6 +159,7 @@ public class JavaLesson2 {
 
         System.out.println("Czy kolekcja jest pusta: " + badFilmsList.isEmpty());   // czy kolekcja jestpusta
         System.out.println("Czy kolekcja jest pusta: " + greatFilmsList.isEmpty());   // czy kolekcja jestpusta
+
         List<String> uczestnicy = new ArrayList<>();
         uczestnicy.add("Paulina");
         uczestnicy.add("Basia");
@@ -166,7 +167,7 @@ public class JavaLesson2 {
         uczestnicy.add("Sebastian");                  //dodawanie bez indeksu
         uczestnicy.add(0, "Sebastian"); // dodawanie z indeksem
         System.out.println(uczestnicy.get(0));           // zwraca uczestnika z indeksem 0
-        System.out.println("Indeks Pauliny: "+ uczestnicy.indexOf("Paulina"));  //zwraca indeks pierwszego wystąpienia, jełi nie ma obiektu to zwraca -1
+        System.out.println("Indeks Pauliny: "+ uczestnicy.indexOf("Paulina"));  //zwraca indeks pierwszego wystąpienia, jeśli nie ma obiektu to zwraca -1
         for (String uczestnik : uczestnicy) {
             System.out.println(uczestnik);            //iterowanie po kolekcji. Dopuszcza duplikaty.
         }
@@ -187,8 +188,8 @@ public class JavaLesson2 {
         //System.out.println("Rozmiar drugiego seta" + uczestnicy2Set.size()); //Exception in thread "main" java.lang.IllegalArgumentException: duplicate element: Ajibola
         Set<String> uczestnicy3Set = Set.of("Ajibola","Paulina", "Damdin", "Darek");
         System.out.println("Rozmiar drugiego seta: " + uczestnicy3Set.size()); //Exception in thread "main" java.lang.IllegalArgumentException: duplicate element: Ajibola
-        /*
- // 4. ************ String
+/*
+  //4. ************ String
         String imie1 = "Darek";
         String imie2 = new String("Darek");
         String imie3 = "Darek";
@@ -205,16 +206,21 @@ public class JavaLesson2 {
         System.out.println(imie3.indexOf("a")); //indeks litery a. Od zera
         String para = imie3.concat(" i Angelina"); //konkatenacja, to samo co +
         System.out.println(para);
-//porównie stringów
+
+        //porównie stringów
         System.out.println(imie1 == imie3); //true, porównaie obiektów w pamięci
         System.out.println(imie1.equals(imie3)); //true, porónie zawartości
-//konkatenacja z innymi typami
+
+        // konkatenacja z innymi typami
         System.out.println(2 + 2); //4
         System.out.println("wynik 2+2 = " + 2 + 2); // całość to string jeśli na poczatu jest string. Wtedy nie ma dodawnaia tyko konkatenaca
-//toString - na przykładzie samochodu
+
+        // toString - na przykładzie samochodu
         Car car = new Car("Toyota", 6, false);
         System.out.println(car); //Car@21bcffb5 - gdy nie ma metody toString. Trzeba dopisać w klasie. gdy jest: Car{producent='Toyota', biegi=6, isElectric=false}
         }
+
+
     //5. Operacje matematyczne
     String strLiczba = "1983";
     //string na liczbe
