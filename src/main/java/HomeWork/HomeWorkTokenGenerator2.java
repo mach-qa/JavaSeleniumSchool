@@ -3,29 +3,18 @@ package HomeWork;
 import java.util.*;
 
 public class HomeWorkTokenGenerator2 {
-    public static void main(String[] args) {
+
+    public static int getNumberFromUser() {
 
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Provide length of Token:");
-        int tokenLength = scanner.nextInt();
-/*            List<String> givenList = new ArrayList<String>();
 
-            givenList.add("A");
-            givenList.add("B");
-            givenList.add("C");
-            givenList.add("D");
-            givenList.add("E");
-            givenList.add("F");
-            givenList.add("G");
-            givenList.add("H");
-            givenList.add("I");
-            givenList.add("J");
+        return scanner.nextInt();
+    }
 
-            for (int i = 0; i < 10; i++) {
-                    random = givenList.get(randomizer.nextInt(givenList.size()));
-                    System.out.print(random);
-*/
+
+    public static String numberGenerator(int number) {
+
 
         String lowerCases = "abcdefghijklmnopqrstuvwxyz";
         String upperCases = lowerCases.toUpperCase();
@@ -34,29 +23,28 @@ public class HomeWorkTokenGenerator2 {
 
         String tokenValues = lowerCases + upperCases + numbers + specialCharacters;
 
-        Random randomizer = new Random();
-        String random;
+        Random random = new Random();
+        String token = null;
 
-
-        for (int i = 0; i < tokenLength; i++) {
-            random = String.valueOf(tokenValues.charAt(randomizer.nextInt(tokenValues.length())));
-            break;
+        for (int i = 0; i < number; i++) {
+            token = String.valueOf(tokenValues.charAt(random.nextInt(tokenValues.length())));
+            System.out.print(token);
 
         }
-        ;
 
+        return token;
+    }
 
-        //           if (tokenLength == 5) {
-//                System.out.print("Your token is : " + random);
-//            } else if (tokenLength == 10) {
-//                System.out.print("Your token is : " + random);
-//            } else if (tokenLength == 15) {
-//                System.out.print("Your token is : " + random);
-//            } else {
-//                System.out.print("Yout token need have value");
-//            }
-//        }
+    public static void main(String[] args) {
+
+        int number = getNumberFromUser();
+
+        switch (number) {
+            case 5, 10, 15 -> {
+                System.out.println("Your Token:");
+                numberGenerator(number);
+            }
+            default -> System.out.println("You can choose only between 5, 10 and 15 characters");
+        }
     }
 }
-
-
