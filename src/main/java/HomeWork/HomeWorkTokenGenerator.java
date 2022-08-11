@@ -8,30 +8,29 @@ public class HomeWorkTokenGenerator {
 
       Scanner scanner = new Scanner(System.in);
 
-        int leftLimit = 33; //
-        int rightLimit = 122; //
+        int leftLimit = 33; // letter 'a'
+        int rightLimit = 122; // letter 'z'
 
         System.out.println("Provide length of Token:");
-        int targetStringLength = scanner.nextInt();
+        int tokenLength = scanner.nextInt();
 
         Random random = new Random();
 
         String generatedString = random.ints(leftLimit, rightLimit)
-                .limit(targetStringLength)
+                .limit(tokenLength)
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
                 .toString();
 
-
-
-        if (targetStringLength == 5) {
+        if (tokenLength == 5) {
             System.out.println("Your token is: " + generatedString);
-        } else if (targetStringLength == 10) {
+        } else if (tokenLength == 10) {
             System.out.println("Your Token is: " + generatedString);
-        } else if (targetStringLength == 15) {
+        } else if (tokenLength == 15) {
             System.out.println("Your Token is: " + generatedString);
         } else {
               System.out.println("Your Token Length is incorrect, please try again");
-        }
+        };
+
 
 
     }
