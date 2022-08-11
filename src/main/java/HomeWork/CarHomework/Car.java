@@ -2,11 +2,11 @@ package HomeWork.CarHomework;
 
 public class Car {
 
-    private Producent producent;
-    private boolean isAutomaticGear;
-    private Market market;
-    private String segment;
-    Dimension dimension;
+    public Producent producent;
+    public boolean isAutomaticGear;
+    public Market market;
+    public String segment;
+    public Dimension dimension;
 
     public Car(Producent producent, boolean isAutomaticGear, Market market, String segment, Dimension dimension) {
         this.producent = producent;
@@ -15,6 +15,8 @@ public class Car {
         this.segment = segment;
         this.dimension = dimension;
     }
+
+
 
 
 

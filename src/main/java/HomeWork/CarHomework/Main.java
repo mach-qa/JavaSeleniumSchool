@@ -1,18 +1,24 @@
 package HomeWork.CarHomework;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        ////Collection of countries
+        //Collection of countries
         Country korea = new Country("Korea",'K');
         Country germany = new Country("Germany", 'G');
         Country france = new Country("France", 'F');
-        Country netherlands = new Country("Netherlands", 'N');
+        Country poland = new Country("Poland", 'P');
         Country sweden = new Country("Sweden", 'S');
 
-        ////Collection of Markets
-        //Market sweden = new Market()
+        //Adding countries into List
+
+
+        //Collection of Markets
+        Market market1 = new Market("EU", (List<Country>) poland);
+
 
         //Collection of Dimensions
         Dimension dimension1 = new Dimension (145, 120, 60);
@@ -37,6 +43,11 @@ public class Main {
         Producent producent8 = new Producent ("DAF", "CF");
         Producent producent9 = new Producent ("Volvo", "S60");
         Producent producent10 = new Producent ("Volvo", "XC90");
+
+        //Collection of Cars
+        //Car car1 = new Car (producent1, true, , standard, 1);
+
+        System.out.println();
 
     }
 }
