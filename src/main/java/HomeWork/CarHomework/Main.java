@@ -1,5 +1,6 @@
 package HomeWork.CarHomework;
 
+
 import java.util.List;
 
 public class Main {
@@ -14,10 +15,11 @@ public class Main {
         Country sweden = new Country("Sweden", 'S');
 
         //Adding countries into List
+        //List<Country> eu = List.as (poland);
 
 
         //Collection of Markets
-        Market market1 = new Market("EU", (List<Country>) poland);
+        //Market market1 = new Market("EU", (List<Country>) poland);
 
 
         //Collection of Dimensions
