@@ -3,7 +3,7 @@ package automationSchool.lesson3.ch3_Advanced;
 public class Person {
     String firstName;
     String lastName;
-    Address address;
+    private Address address;
 
     public Person(String firstName, String lastName, Address address) {
         this.firstName = firstName;
