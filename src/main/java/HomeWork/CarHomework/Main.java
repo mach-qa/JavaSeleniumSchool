@@ -1,11 +1,14 @@
 package HomeWork.CarHomework;
 
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
+
 
         //Collection of countries
         Country korea = new Country("Korea",'K');
@@ -19,7 +22,13 @@ public class Main {
 
 
         //Collection of Markets
-        //Market market1 = new Market("EU", (List<Country>) poland);
+        List<Country> europeCountries = new LinkedList<>();
+        europeCountries.add(korea);
+        europeCountries.add(germany);
+
+        List<Country> asiaCountries = List.of(france, poland, sweden);
+        Market asiaMarket = new Market("Asia", asiaCountries);
+        Market europeMarket = new Market("EU", europeCountries);
 
 
         //Collection of Dimensions
@@ -33,6 +42,11 @@ public class Main {
         Dimension dimension8 = new Dimension (189, 200, 299);
         Dimension dimension9 = new Dimension (199, 120, 124);
         Dimension dimension10 = new Dimension (200, 99, 255);
+
+        //List of Dimensions
+        List<Dimension> miniCars = List.of(dimension1, dimension2, dimension3);
+        List<Dimension> standardCars = List.of(dimension4, dimension3, dimension6);
+
 
         //Collection of Producents
         Producent producent1 = new Producent ("Kia", "Stinger");
