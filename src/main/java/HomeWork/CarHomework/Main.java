@@ -1,5 +1,6 @@
 package HomeWork.CarHomework;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -60,7 +61,7 @@ public class Main {
         Producent producer9 = new Producent("Volvo", "S60");
         Producent producer10 = new Producent("Volvo", "XC90");
 
-
+        //Collection of Cars
         ArrayList<Car> allCars = new ArrayList<>();
         allCars.add(new Car(producer1, true, truckMarket, "premium", sedanCars));
         allCars.add(new Car(producer2, false, middleEuropeMarket, "standard", combiCars));
@@ -79,13 +80,22 @@ public class Main {
         allCars.add(new Car(producer7, true, worldMarket, "medium", suvCars));
 
 
-
         for (Car filteredCar : allCars) {
+            if (filteredCar.getProducer().getModel().equals("BMW")
+                    && filteredCar.isAutomaticGear() == true
+                    && filteredCar.getDimension().get(1).getTrunkCapacity() > 300) {
+                for (int i = 0; i < filteredCar.getMarket().getCountries().size(); i++) {
+                    Country marketCountry = filteredCar.getMarket().getCountries().get(i);
+                    System.out.println("Country: " + marketCountry.getCountryName() + "-" + marketCountry.getCountrySign());
+                }
 
-            if (filteredCar.getProducer().getModel().equals("BMW") &&
-                    filteredCar.isAutomaticGear() == true && filteredCar.getDimension().containsAll(truckCars)) {
+//                ArrayList<Car> newList = new ArrayList<>();
+//                for (Car element : allCars) {
+//                    if (!newList.contains(element)) {
+//                        newList.add(element);
+//                    }
+//                }
 
-                System.out.println("Country: " + (filteredCar.getMarket().getCountries()));
                 //for (int i = 0; i < 3; i++){
                 //Country marketCountry = filteredCar.market.getCountries().get(i);
                 //System.out.println("Country from the market: " + myCar.market.getName());
@@ -93,8 +103,8 @@ public class Main {
             }
         }
     }
+}
 
-    }
 
 
 

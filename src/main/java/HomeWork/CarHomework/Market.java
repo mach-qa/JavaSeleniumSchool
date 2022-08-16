@@ -1,5 +1,6 @@
 package HomeWork.CarHomework;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Market {
@@ -29,4 +30,5 @@ public class Market {
     public void setCountries(List<Country> countries) {
         this.countries = countries;
     }
+
 }

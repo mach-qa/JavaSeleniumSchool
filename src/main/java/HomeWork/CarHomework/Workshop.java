@@ -15,18 +15,18 @@ public class Workshop {
     Country sweden = new Country("Sweden", 'S');
 
     //Created list of countries
-    List<Country> asiaCountries = List.of(korea, sweden);
-    List<Country> westEuropeCountries = List.of(france, germany);
-    List<Country> middleEuropeCountries = List.of(poland, sweden);
-    List<Country> europeCountries = List.of(poland, sweden,germany,france);
-    List<Country> allCountries = List.of(poland, sweden,germany,france, korea);
+    //List<Country> asiaCountries = List.of(korea, sweden);
+    //List<Country> westEuropeCountries = List.of(france, germany);
+    //List<Country> middleEuropeCountries = List.of(poland, sweden);
+    //List<Country> europeCountries = List.of(poland, sweden,germany,france);
+    //List<Country> allCountries = List.of(poland, sweden,germany,france, korea);
 
     //Created list of Markets
-    Market truckMarket = new Market("truck", asiaCountries);
-    Market customerMarket = new Market("customer", europeCountries);
-    Market westEuropeMarket = new Market ("West Europe", westEuropeCountries);
-    Market middleEuropeMarket = new Market ("Middle Europe", middleEuropeCountries);
-    Market worldMarket = new Market ("Car", allCountries);
+    //Market truckMarket = new Market("truck", asiaCountries);
+    //Market customerMarket = new Market("customer", europeCountries);
+    //Market westEuropeMarket = new Market ("West Europe", westEuropeCountries);
+    //Market middleEuropeMarket = new Market ("Middle Europe", middleEuropeCountries);
+    //Market worldMarket = new Market ("Car", allCountries);
 
     //Collection of Dimensions
     Dimension dimension1 = new Dimension (145, 120, 60);
