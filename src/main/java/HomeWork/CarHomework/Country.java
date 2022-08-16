@@ -10,19 +10,7 @@ public class Country {
         this.countrySign = countrySign;
     }
 
-    public String getCountryName() {
-        return countryName;
-    }
 
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
-    }
 
-    public char getCountrySign() {
-        return countrySign;
-    }
 
-    public void setCountrySign(char countrySign) {
-        this.countrySign = countrySign;
-    }
 }
