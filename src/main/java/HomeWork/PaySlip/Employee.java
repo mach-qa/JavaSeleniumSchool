@@ -12,7 +12,7 @@ public class Employee {
     }
 
     public void getAllData() {
-        System.out.println("Salary for " + firstName + " " + lastName + " is " + Integer.toString (salary));
+        System.out.println("Salary for " + firstName + " " + lastName + " is " + (salary));
     }
 
     public String getFirstname() {
