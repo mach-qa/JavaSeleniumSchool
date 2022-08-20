@@ -8,11 +8,8 @@ public class guessNumber {
     public static int userNumber;
 
     public static int requestedNumber() {
-
         Scanner scanner = new Scanner(System.in);
-
         int userNumber = scanner.nextInt();
-
         return userNumber;
     }
 

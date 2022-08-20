@@ -1,107 +1,47 @@
 package HomeWork.PaySlip;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import static HomeWork.PaySlip.Employee.addNewEmployee;
+import static HomeWork.PaySlip.Employee.removeEmployee;
+import static HomeWork.PaySlip.Helpers.*;
+import static HomeWork.PaySlip.MenuOptions.*;
 
 public class Main {
-
-    private void userScanner () {
-
-
-    }
-
-    private void addNewEmployee (){
-
-
-        System.out.println("Please provide a first name");
-        String firstName = scanner.nextLine();
-
-        System.out.println("Please provide a Last Name name");
-        String lastName = scanner.nextLine();
-
-        System.out.println("Please provide a Last Name name");
-        int salary = scanner.nextInt();
-        while (!scanner.hasNextLine()) {
-            System.out.println("This is not a number! Please try again:");
-            scanner.nextInt();
-        }
-
-    }
-
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        Company listOfWorkers = new Company();
 
-        private void addNewEmployee (){
-            System.out.println("Please provide a first name");
-            String firstName = scanner.nextLine();
-
-            System.out.println("Please provide a Last Name name");
-            String lastName = scanner.nextLine();
-
-            System.out.println("Please provide a Last Name name");
-            int salary = scanner.nextInt();
-            while (!scanner.hasNextLine()) {
-                System.out.println("This is not a number! Please try again:");
-                scanner.nextInt();
-            }
-
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Worker no. " + (listOfWorkers.sizeOfCompany() + 1));
+            listOfWorkers.addWorker(addNewEmployee());
         }
 
-        System.out.println("Please provide a first name");
-        String firstName = scanner.nextLine();
-
-        System.out.println("Please provide a Last Name name");
-        String lastName = scanner.nextLine();
-
-        System.out.println("Please provide a Last Name name");
-        int salary = scanner.nextInt();
-        while (!scanner.hasNextLine()) {
-            System.out.println("This is not a number! Please try again:");
-            scanner.nextInt();
-        }
-
-        ArrayList<Employee> employeeIndex = new ArrayList<>();
-
-        employeeIndex.add(new Employee(firstName, lastName, salary));
-        employeeIndex.add(new Employee(firstName, lastName, salary));
-        employeeIndex.add(new Employee(firstName, lastName, salary));
-        employeeIndex.add(new Employee(firstName, lastName, salary));
-        employeeIndex.add(new Employee(firstName, lastName, salary));
-
-        Company employeesList = new Company(employeeIndex);
-
-        int option = scanner.nextInt();
-
-        System.out.println("1 - Print sum of all employees salary");
-        System.out.println("2 - Display all employees data");
-        System.out.println("3 - Add new employee");
-        System.out.println("4 - End program");
-
-        switch (option){
-            case 1: {
-                int sum = 0;
-                for (int i = 0; i < employeeIndex.size(); i++) {
-                    sum += employeesList.getWorkerIndex().get(i).getSalary();
+        while (true) {
+            printMenu();
+            int option = scannerForInteger();
+            switch (option) {
+                case 1:
+                    sumOfWorkersSalary(listOfWorkers);
+                    continue;
+                case 2:
+                    printListOfWorkersSalary(listOfWorkers);
+                    continue;
+                case 3: {
+                    System.out.println("Please enter required data for a new Worker");
+                    listOfWorkers.addWorker(addNewEmployee());
                 }
-                System.out.println("The sum of all employees salary is" + sum);
-            }
-            case 2: {
-                for (int i = 0; i < employeeIndex.size(); i++) {
-                    System.out.println(
-                            employeesList.getWorkerIndex().get(i).getFirstname() + ", "
-                                    + employeesList.getWorkerIndex().get(i).getLastName()
-                    );
+                continue;
+                case 4: updateWorkerData(listOfWorkers); continue;
+                case 5: {
+                    removeEmployee(listOfWorkers);
                 }
+                case 6: {
+                    System.out.println("Thank you ! Have a nice day !");
+                    System.exit(0);
+                    break;
+                }
+                default:
+                    System.out.println("The option you choose, doesn't exist. Please try again");
             }
-            case 3: {
-
-            }
-                System.out.println("3 - Add new employee");
-            case 4:
-                System.out.println("4 - End program");
-                break;
-            default:
         }
     }
 }

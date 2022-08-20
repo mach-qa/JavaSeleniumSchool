@@ -1,5 +1,9 @@
 package HomeWork.PaySlip;
 
+import java.util.Scanner;
+
+import static HomeWork.PaySlip.Helpers.scannerForInteger;
+
 public class Employee {
     private String firstName;
     private String lastName;
@@ -12,14 +16,35 @@ public class Employee {
     }
 
     public void getAllData() {
-        System.out.println("Salary for " + firstName + " " + lastName + " is " + (salary));
+        System.out.println("Salary for " + this.firstName + " " + this.lastName + " is " + Integer.toString(this.salary));
     }
 
-    public String getFirstname() {
+    public static Employee addNewEmployee() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please provide a First name");
+        String firstName = scanner.nextLine();
+
+        System.out.println("Please provide a Last name");
+        String lastName = scanner.nextLine();
+
+        System.out.println("Please provide a salary");
+        int salary = scannerForInteger();
+
+        return new Employee (firstName, lastName, salary);
+    }
+
+    public static void removeEmployee(Company list) {
+        System.out.println("Enter the index number of the worker you want to remove from the database");
+        int index = scannerForInteger() - 1;
+        list.getWorkerIndex().remove(index);
+    }
+
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstname(String firstname) {
+    public void setFirstName(String firstname) {
         this.firstName = firstname;
     }
 

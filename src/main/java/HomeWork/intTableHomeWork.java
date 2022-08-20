@@ -5,11 +5,8 @@ import java.util.Scanner;
 public class intTableHomeWork {
 
     public static int requestedNumber() {
-
         Scanner scanner = new Scanner(System.in);
-
         int tableSize = scanner.nextInt();
-
         return tableSize;
     }
 
