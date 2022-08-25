@@ -10,7 +10,7 @@ public class Helpers {
         System.out.println("2 – Display all employees data");
         System.out.println("3 – Add new employee");
         System.out.println("4 – Update Worker's data");
-        System.out.println("4 – Update Worker's data");
+        System.out.println("4 – Remove Worker from the database");
         System.out.println("5 – End program");
     }
 
