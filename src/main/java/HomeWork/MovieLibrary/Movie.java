@@ -6,7 +6,7 @@ import java.util.List;
 public class Movie {
 
     private String movieTitle;
-    private String dateOfDistribution;
+    private int dateOfDistribution;
     private String genre;
     private Director director;
     private ArrayList<Actor> listOfMovieActors;
@@ -16,12 +16,27 @@ public class Movie {
 
     }
 
-    public Movie(String movieTitle, String dateOfDistribution, String genre, Director director, ArrayList<Actor> listOfMovieActors) {
+    public Movie(String movieTitle, int dateOfDistribution, String genre, Director director, ArrayList<Actor> listOfMovieActors) {
         this.movieTitle = movieTitle;
         this.dateOfDistribution = dateOfDistribution;
         this.genre = genre;
         this.director = director;
         this.listOfMovieActors = listOfMovieActors;
+    }
+
+    public Movie(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "movieTitle='" + movieTitle + '\'' +
+                ", dateOfDistribution='" + dateOfDistribution + '\'' +
+                ", genre='" + genre + '\'' +
+                ", director=" + director +
+                ", listOfMovieActors=" + listOfMovieActors +
+                '}';
     }
 
     public String getMovieTitle() {
@@ -32,11 +47,11 @@ public class Movie {
         this.movieTitle = movieTitle;
     }
 
-    public String getDateOfDistribution() {
+    public int getDateOfDistribution() {
         return dateOfDistribution;
     }
 
-    public void setDateOfDistribution(String dateOfDistribution) {
+    public void setDateOfDistribution(int dateOfDistribution) {
         this.dateOfDistribution = dateOfDistribution;
     }
 
