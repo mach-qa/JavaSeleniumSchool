@@ -1,8 +1,10 @@
-package HomeWork.MovieLibrary;
+package HomeWork.MovieLibrary.Models;
 
 public class Actor {
     private String firstName;
     private String lastName;
+
+    public Actor () {};
 
     public Actor(String firstName, String lastName) {
         this.firstName = firstName;
@@ -23,5 +25,10 @@ public class Actor {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return this.firstName + " " + this.lastName;
     }
 }

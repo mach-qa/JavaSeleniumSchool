@@ -1,9 +1,12 @@
-package HomeWork.MovieLibrary;
+package HomeWork.MovieLibrary.Models;
 
 public class Director {
     private String firstName;
 
     private String lastName;
+
+    public Director() {
+    }
 
     public Director(String firstName, String lastName) {
         this.firstName = firstName;
@@ -24,5 +27,10 @@ public class Director {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return this.firstName + " " + this.lastName;
     }
 }

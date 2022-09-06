@@ -1,48 +1,117 @@
 {
-  "movies":[
+  "movies": [
     {
-      "title":"The Shawshank Redemption",
-      "director":{
-        "firstName":"Frank",
-        "lastName":"Darabont"
+      "title": "Sin City",
+      "director": {
+        "firstName": "Robert",
+        "lastName": "Rodriguez"
       },
-      "genre":"DRAMA",
-      "date":"1994",
-      "actors":[
+      "genre": "Criminal",
+      "date": 2005,
+      "actors": [
         {
-          "firstName":"Tim",
-          "lastName":"Robbins"
+          "firstName": "Michael",
+          "lastName": "Duncan"
         },
         {
-          "firstName":"Morgan",
-          "lastName":"Freeman"
+          "firstName": "Bruce",
+          "lastName": "Willis"
         },
         {
-          "firstName":"Bob",
-          "lastName":"Gunton"
+          "firstName": "Mickey",
+          "lastName": "Rourke"
         }
       ]
     },
     {
-      "title":"Seven",
-      "director":{
-        "firstName":"David",
-        "lastName":"Fincher"
+      "title": "Apollo 13",
+      "director": {
+        "firstName": "Tom",
+        "lastName": "Shadyac"
       },
-      "genre":"THRILLER",
-      "date":"1995",
-      "actors":[
+      "genre": "Sci-fi",
+      "date": 1994,
+      "actors": [
         {
-          "firstName":"Morgan",
-          "lastName":"Freeman"
+          "firstName": "Tom",
+          "lastName": "Hanks"
         },
         {
-          "firstName":"Brad",
-          "lastName":"Pitt"
+          "firstName": "Ed",
+          "lastName": "Haris"
         },
         {
-          "firstName":"Gwyneth",
-          "lastName":"Paltrow"
+          "firstName": "Gary",
+          "lastName": "Sinise"
+        }
+      ]
+    },
+    {
+      "title": "Truman Show",
+      "director": {
+        "firstName": "Peter",
+        "lastName": "Weir"
+      },
+      "genre": "Drama",
+      "date": 1998,
+      "actors": [
+        {
+          "firstName": "Jim",
+          "lastName": "Carrey"
+        },
+        {
+          "firstName": "Natascha",
+          "lastName": "McElhone"
+        },
+        {
+          "firstName": "Ed",
+          "lastName": "Haris"
+        }
+      ]
+    },
+    {
+      "title": "The Green Mile",
+      "director": {
+        "firstName": "Frank",
+        "lastName": "Darabont"
+      },
+      "genre": "Sci-fi",
+      "date": 2000,
+      "actors": [
+        {
+          "firstName": "Tom",
+          "lastName": "Hanks"
+        },
+        {
+          "firstName": "Gary",
+          "lastName": "Sinise"
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Duncan"
+        }
+      ]
+    },
+    {
+      "title": "The Expendables",
+      "director": {
+        "firstName": "Sylvester",
+        "lastName": "Stallone"
+      },
+      "genre": "Action",
+      "date": 2010,
+      "actors": [
+        {
+          "firstName": "Gary",
+          "lastName": "Sinise"
+        },
+        {
+          "firstName": "Bruce",
+          "lastName": "Willis"
+        },
+        {
+          "firstName": "Mickey",
+          "lastName": "Rourke"
         }
       ]
     }
